@@ -16,12 +16,12 @@ const BackgroundWithSections = () => {
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
-  // Store refs in an array
-  const partRefs = [homeRef, aboutRef, resumeRef, servicesRef, skillsRef, contactRef];
+  // Store refs in an array (useRef keeps the refs stable across renders)
+  const partRefs = useRef([homeRef, aboutRef, resumeRef, servicesRef, skillsRef, contactRef]);
 
   const handleScrollToPart = (partIndex) => {
-    if (partRefs[partIndex].current) {
-      partRefs[partIndex].current.scrollIntoView({ behavior: 'smooth' });
+    if (partRefs.current[partIndex].current) {
+      partRefs.current[partIndex].current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -39,7 +39,7 @@ const BackgroundWithSections = () => {
     );
 
     // Attach observer to each ref individually
-    partRefs.forEach((ref) => {
+    partRefs.current.forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
       }
@@ -48,7 +48,7 @@ const BackgroundWithSections = () => {
     return () => {
       observer.disconnect();
     };
-  }, []); // No dependencies needed because the refs don't change
+  }, []); // No dependencies needed because partRefs is stable
 
   return (
     <div className="page-container">
@@ -62,8 +62,8 @@ const BackgroundWithSections = () => {
 
       {/* Horizontal Sections */}
       <div className="horizontal-sections">
-        <FirstSection sectionRefs={partRefs} /> {/* No changes here as requested */}
-        <SecondSection sectionRefs={partRefs} /> {/* This will include the sections with scrolling */}
+        <FirstSection sectionRefs={partRefs.current} /> {/* No changes here as requested */}
+        <SecondSection sectionRefs={partRefs.current} /> {/* This will include the sections with scrolling */}
       </div>
 
       {/* Floating Navbar */}

@@ -24,7 +24,7 @@ const FirstSection = ({sectionRefs}) => {
             <h2 className='emailDetails'>ysuraj18333@gmail.com <br /> Vasco Da Gama, Goa</h2>
             <p className='copyright'>© 2022 Suraj. All Rights Reserved</p>
             <div className="social-media">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/suraj-yadav-8aa167216/">
                     <div className="icon-circle">
                     <TwitterIcon className='social-icon' style={{ color: 'rgb(232, 226, 225, 0.7)' }} />
                     </div>
