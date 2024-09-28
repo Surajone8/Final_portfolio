@@ -12,7 +12,7 @@ const ContactForm = () => {
     message: '',
   });
 
-  const fileInputRef = useRef(null);
+//   const fileInputRef = useRef(null);
   const formRef = useRef(null);
 
   const handleChange = (e) => {
@@ -27,7 +27,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     const form = formRef.current;
-    const formDataWithFiles = new FormData(form);
+    // const formDataWithFiles = new FormData(form);
     emailjs.sendForm(
         'service_sokretx',
         'template_4l5uath',

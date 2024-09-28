@@ -1,24 +1,23 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './BackgroundVideo.css';
 import backgroundVideo from '../assets/background.mp4';
-import FirstSection from './FirstSection'; // Your provided FirstSection
-import SecondSection from './SecondSection'; // This will contain the sections related to the Floating Navbar
+import FirstSection from './FirstSection';
+import SecondSection from './SecondSection';
 import FloatingNavbar from './FloatingNavbar';
 
 const BackgroundWithSections = () => {
   const [activePartIndex, setActivePartIndex] = useState(0); // Default to 'Home' (index 0)
 
-  // Create an array of refs for each part in the SecondSection
-  const partRefs = [
-    useRef(null), // Home
-    useRef(null), // About
-    useRef(null), // Resume
-    useRef(null), // Services
-    useRef(null), // Skills
-    useRef(null), // Contact
-  ];
+  // Create refs directly for each section
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const resumeRef = useRef(null);
+  const servicesRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
-
+  // Store refs in an array
+  const partRefs = [homeRef, aboutRef, resumeRef, servicesRef, skillsRef, contactRef];
 
   const handleScrollToPart = (partIndex) => {
     if (partRefs[partIndex].current) {
@@ -39,6 +38,7 @@ const BackgroundWithSections = () => {
       { threshold: 0.5 } // Adjust threshold as needed
     );
 
+    // Attach observer to each ref individually
     partRefs.forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
@@ -48,7 +48,7 @@ const BackgroundWithSections = () => {
     return () => {
       observer.disconnect();
     };
-  }, [partRefs]);
+  }, []); // No dependencies needed because the refs don't change
 
   return (
     <div className="page-container">

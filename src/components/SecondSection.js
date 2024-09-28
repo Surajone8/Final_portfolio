@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Home from './Parts/Home'
 import About from './Parts/About';
 import Services from './Parts/Services';

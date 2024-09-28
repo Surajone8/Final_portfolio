@@ -29,17 +29,17 @@ const FirstSection = ({sectionRefs}) => {
                     <TwitterIcon className='social-icon' style={{ color: 'rgb(232, 226, 225, 0.7)' }} />
                     </div>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/srj_one8/">
                     <div className="icon-circle">
                     <InstagramIcon className='social-icon' style={{ color: 'rgb(232, 226, 225, 0.7)' }} />
                     </div>
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/suraj-yadav-8aa167216/">
                     <div className="icon-circle">
                     <LinkedInIcon className='social-icon' style={{ color: 'rgb(232, 226, 225, 0.7)' }} />
                     </div>
                 </a>
-                <a href="#">
+                <a href="https://github.com/Surajone8">
                     <div className="icon-circle">
                     <GitHubIcon className='social-icon' style={{ color: 'rgb(232, 226, 225, 0.7)' }} />
                     </div>
