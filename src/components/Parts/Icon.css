@@ -1,0 +1,39 @@
+.part-content{
+    /* position: relative; */
+    /* background-color: red; */
+    /* border: 1px solid white; */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+    padding: 10% 0;
+    /* margin: 2em; */
+}
+
+.icon-circle-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: auto;
+    height: 40px; */
+    padding: 0.3em 0.8em;
+    gap: 0.5em;
+    border: 1px solid var(--icon-border-color);
+    border-radius: 3em;
+    transition: background-color 0.7s ease;
+    /* position: absolute; */
+    /* top: 10%; */
+    /* left: 0; */
+}
+
+.icon-circle-part svg{
+    font-size: 20px;
+}
+
+.part-header-small{
+    font-size: 3em;
+    font-weight: 300;
+}

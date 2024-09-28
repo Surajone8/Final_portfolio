@@ -1,0 +1,10 @@
+.scroll-content {
+    height: 100vh; /* Each part now takes 100vh */
+    padding: 50px;
+    margin-bottom: 20px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

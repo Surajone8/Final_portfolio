@@ -1,0 +1,27 @@
+import React from 'react';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import DescriptionIcon from '@mui/icons-material/Description';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import GridOnIcon from '@mui/icons-material/GridOn';
+import CategoryIcon from '@mui/icons-material/Category';
+
+export default function VerticalNavBar() {
+  return (
+    <>
+        <div className="vertical-nav">
+        <div className="nav-icons">
+            <HomeIcon className="nav-icon active" />
+            <PersonIcon className="nav-icon" />
+            <BusinessCenterIcon className="nav-icon" />
+            <GridOnIcon className="nav-icon" />
+            <CategoryIcon className="nav-icon" />
+            <DescriptionIcon className="nav-icon" />
+            <MailOutlineIcon className="nav-icon" />
+        </div>
+        </div>
+    </>
+
+  );
+}

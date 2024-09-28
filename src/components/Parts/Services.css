@@ -1,0 +1,16 @@
+.projectImg{
+    width: 30em;
+    left: auto;
+    right: auto;
+    /* border: 1px solid; */
+    cursor: pointer;
+}
+.project-name{
+    text-align: center;
+}
+
+.project-name h3{
+    font-size: 2em;
+    font-weight: 300;
+    position: relative;
+}
